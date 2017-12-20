@@ -1,0 +1,82 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+  @media screen and (min-width: 900px) {
+  
+
+  .formulaire{
+    display:inline-block; 
+    float:$right; 
+   }
+
+  .formulaire .champ{
+      width:140px; 
+      height:30px; 
+      float:$right; 
+   } 
+  .formulaire .bouton{
+     background-repeat: no-repeat;
+     width: 35px;
+     height: 35px;
+     padding: 0; 
+     margin: -1em; 
+     padding: 1em;
+   }
+
+   #header{
+     height:2px;
+     width:100%;
+     background-color:#DDDDDD;
+   }
+
+   .image{
+   height: $px ;
+   width: 400px;
+   }
+
+  .bordure{
+    @include bordure (400px, 10px);
+   }
+
+  .more{
+    @include more (80px);
+   }
+
+  .acheter{
+      @include more (125px);
+   }
+   
+   div#liste{
+    margin-left: $px ;
+    margin-right: $px ;
+    width: 60em;
+   }
+   
+   .paragraphe{
+       text-align: $justify;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+  .more{
+     @include more (80px);
+   }
+   
+   .image{
+     height: 200px;
+     width: 100%;
+   }
+   
+   .bordure{
+    @include bordure (100%, 0);
+   }
+   
+   .paragraphe{
+      text-align: $justify;
+    }
+	
+    .acheter{
+      @include more (125px);
+   }
+}

@@ -1,0 +1,39 @@
+@mixin bordure ($width, $margin-left){
+    display: inline-block;
+    margin-left: $margin-left;
+    overflow: hidden;  
+    border-width:1px;
+    border-style:solid;
+    color:#DFDFDF;
+    padding:auto;
+    width:$width;
+}
+
+@mixin more ($largeur){
+    background-color:#007BFF;
+    display:inline-block;
+    color:white;
+    font-weight:bold;
+    height:38px;
+    line-height:38px;
+    margin-bottom:10px;
+    text-decoration:$none;
+    width:$largeur;
+    border-radius: 5px;
+    text-align: center;
+}
+
+   
+@mixin menuLi{  
+    list-style: $none;
+    display: $displayInline;
+    margin: auto; 
+	padding: 0;
+}
+
+@mixin ulMenu{  
+    margin: -1em; 
+    padding: 1em;
+    text-align: left;
+    background-color: $ColorMenu
+}

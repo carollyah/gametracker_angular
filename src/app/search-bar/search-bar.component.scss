@@ -1,0 +1,44 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+body {
+    font: normal 100.01% Helvetica;
+  }
+
+  @media screen and (min-width: 900px) {
+
+  span#searchbar {
+    float:center; 
+  }
+  
+  .formulaire{
+    display:inline-block; 
+	margin-left: 530px;
+   
+   }
+
+  .formulaire .champ{
+      border-width:2px;
+      width:300px; 
+      height:30px; 
+      float:$right 
+   } 
+  .formulaire .bouton{
+     background-repeat: no-repeat;
+     width: 35px;
+     height: 35px;
+     padding: 0; 
+     margin: -1em; 
+     padding: 1em;
+   }
+}
+
+@media screen and (max-width: 900px)
+{
+
+span#searchbar {
+    display: $none;
+  }
+
+}
+

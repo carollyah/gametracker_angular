@@ -1,0 +1,85 @@
+@import '~sass/variables';
+@import '~sass/mixins';
+
+body {
+    font: normal 100.01% Helvetica;
+  }
+
+  @media screen and (min-width: 900px) {
+  
+   ul#menu {
+    @include ulMenu;
+   }
+  
+   ul#menu li {
+     @include menuLi;
+   }
+
+   ul#menu a, ul#menu span {
+     padding: 0.2em 1em;
+     text-decoration: $none; ;
+     color: #8599AD; 
+     background-color: $ColorMenu;
+   }
+  
+   ul#menu a:focus /* Quand le visiteur sélectionne le lien */{
+    color: white;
+   }
+  
+  * html ul#menu a, * html ul#menu span {
+    width: 1em;    /* nécessaire pour IE 5.0x seulement */
+    width: auto;  /* annulé par mesure de sécurité pour IE 6 */
+  }
+  
+  ul#menu a:hover, ul#menu span {
+    border-color: white;
+    border-left-color: black; 
+    border-top-color: black;
+    color: white; 
+    background-color: $ColorMenu;
+  }
+
+  .formulaire{
+    display:inline-block; 
+    float:$right; 
+   }
+
+  .formulaire .champ{
+      width:140px; 
+      height:30px; 
+      float:$right; 
+   } 
+  .formulaire .bouton{
+     background-repeat: no-repeat;
+     width: 35px;
+     height: 35px;
+     padding: 0; 
+     margin: -1em; 
+     padding: 1em;
+   }
+  
+   ul#menu li#hamburger {
+    display: $none;
+   }
+}
+
+@media screen and (max-width: 900px)
+{
+    
+ ul#menu {
+    @include ulMenu;
+  }
+  
+  ul#menu li {
+    @include menuLi;
+  }
+
+  ul#menu a#display {
+  display: $none;
+  }
+  
+  ul#menu li#hamburger {
+    float: $right;
+   }
+}
+
